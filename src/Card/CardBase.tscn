@@ -1,16 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/fonts/The Snowday.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/Snowday.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/Card/Card.gd" type="Script" id=2]
 [ext_resource path="res://assets/Card/check_grey.png" type="Texture" id=4]
 [ext_resource path="res://assets/Card/background_text.png" type="Texture" id=5]
 [ext_resource path="res://assets/Card/x_grey.png" type="Texture" id=6]
 [ext_resource path="res://assets/Card/check_green.png" type="Texture" id=7]
 [ext_resource path="res://assets/Card/x_red.png" type="Texture" id=8]
-
-[sub_resource type="DynamicFont" id=1]
-size = 24
-font_data = ExtResource( 1 )
 
 [node name="CardBase" type="Node2D"]
 z_index = 500
@@ -61,7 +57,7 @@ margin_top = 200.0
 margin_right = 630.0
 margin_bottom = 214.0
 grow_vertical = 2
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.317647, 0.254902, 0.254902, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Limitar Comercios"
@@ -71,7 +67,6 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="pressed" from="CheckButton" to="." method="_on_CheckButton_pressed"]
 [connection signal="ready" from="CheckButton" to="." method="_on_CheckButton_ready"]
 [connection signal="pressed" from="XButton" to="." method="_on_XButton_pressed"]

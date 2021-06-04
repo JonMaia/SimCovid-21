@@ -1,0 +1,9 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://assets/fonts/monogram.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 22
+outline_color = Color( 0.972549, 0.0313726, 0.0313726, 1 )
+use_mipmaps = true
+font_data = ExtResource( 1 )
