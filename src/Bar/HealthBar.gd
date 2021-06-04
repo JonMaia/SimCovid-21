@@ -50,6 +50,7 @@ func get_multiplier():
 	return multiplier
 
 func _ready():
+	healthbar_textlabel.add_font_override("normal_font", ResourceLoader.load("res://assets/Fonts/monogramBars.tres"))
 	healthbar_textlabel.set_text(label)
 
 func _set_speed_multiplier(hours_per_second):

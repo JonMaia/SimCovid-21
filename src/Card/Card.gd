@@ -18,6 +18,11 @@ var actual_bar
 var game_over
 var main_node
 
+onready var label = $TextLabel
+
+func _ready():
+	label.add_font_override("normal_font", ResourceLoader.load("res://assets/Fonts/Snowday.tres"))
+
 func initialize(type, description, multipliers, main, has_lost = false) -> void:
 	card_type = type
 	card_multipliers = multipliers

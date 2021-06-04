@@ -18,6 +18,10 @@ signal begin_sunrise
 signal begin_nightfall
 signal quincena
 
+func _ready():
+	fase_label.add_font_override("normal_font", ResourceLoader.load("res://assets/Fonts/monogram.tres"))
+	clock_label.add_font_override("normal_font", ResourceLoader.load("res://assets/Fonts/monogram.tres"))
+
 func morningCard():
 	if(hour_count == 8 ):
 		emit_signal("morning")
