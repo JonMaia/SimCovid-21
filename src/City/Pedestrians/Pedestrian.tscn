@@ -8,6 +8,7 @@ extents = Vector2( 41.7644, 60.5016 )
 
 [node name="Pedestrian" type="AnimatedSprite"]
 position = Vector2( -47.9458, 471.967 )
+z_as_relative = false
 frames = ExtResource( 1 )
 animation = "male_walk"
 playing = true
@@ -17,3 +18,8 @@ script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -1.90735e-06, 0.749126 )
+scale = Vector2( 4.14644, 6.16916 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

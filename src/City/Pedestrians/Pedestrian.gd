@@ -20,6 +20,7 @@ func _move_to_left():
 
 func _process(delta):
 	position.x += direction * speed * delta
+	
 
 func set_male_animation():
 	self.play("male_walk")
@@ -43,8 +44,7 @@ func set_position_and_movement_direction(pos:Vector2):
 		_move_to_left()
 	else:
 		_move_to_right()
-
-func remove_from_scene():
+func _on_VisibilityNotifier2D_screen_exited():
 	call_deferred("_remove")
 
 func _remove():
